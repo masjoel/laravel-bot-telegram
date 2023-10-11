@@ -10,10 +10,7 @@ class BotTelegramController extends Controller
 {
     function setWebhook()
     {
-        $response =  Telegram::setWebhook(['url' => 'https://98ad-157-119-223-129.ngrok-free.app/api/consumer/webhook']);
-        // $response = Telegram::setWebhook(['url' => env('TELEGRAM_WEBHOOK_URL')]);
-        // $cek = Wisata::where('nama_wisata', 'like', '%angkut%')->first();
-
+        $response = Telegram::setWebhook(['url' => env('TELEGRAM_WEBHOOK_URL')]);
         dd($response);
     }
 
